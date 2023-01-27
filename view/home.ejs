@@ -1,12 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%=title%></title>
+    <link rel="shortcut icon" href="https://img.freepik.com/free-vector/hospital-logo-design-vector-medical-cross_53876-136743.jpg?w=2000" type="image/x-icon">
+    <title>
+        <%=title%>
+    </title>
+    <!-- bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="/css/home.css">
 </head>
+
 <body>
-    <h3><%=title%></h3>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">Voosh assignment</a>
+          <form class="d-flex">
+            <a href="https://github.com/tush8788/Voosh-API" class="btn btn-outline-light" target="_blank">code</a>
+          </form>
+        </div>
+    </nav>
+    <br>
+    <center>
+        <h5 style="color: brown;"><b>Use Postman tool for access api or any other frontend framework</b></h5>
+    </center>
+    
+    <br><br>
+    <div class="container">
+        <!-- 1 -->
+        <div class="row">
+            <div class="col-5">
+                <h2>1. crate new user</h2>
+                <p>we need to create post request</p>
+                <b>URL to create new user:- <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/doctors/register</span></b>
+                <center>
+                    <h4>Filds</h4>
+                </center>
+                <table border="1" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>name</td>
+                        <td>any name</td>
+                    </tr>
+                    <tr>
+                        <td>phone</td>
+                        <td>phone no</td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>*********</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col img-container">
+                <img src="/img/register-doctor.png" alt="">
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="row">
+            <div class="col-5">
+                <h2>2. Login User</h2>
+                <p>we need to create post req</p>
+                <b>URL to login user:- <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/doctors/login</span></b>
+                <center>
+                    <h4>Filds</h4>
+                </center>
+                <table border="1" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>phone</td>
+                        <td>phone no</td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>*********</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col img-container">
+                <img src="/img/login-doctor.png" alt="">
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row">
+            <div class="col-5">
+                <h2>3. Set Token for Authorise request inside header of all requests</h2>
+                
+                <b>URL to login :- <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/doctors/login</span></b>
+                <center>
+                    <h4>Filds</h4>
+                </center>
+                <table border="1" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Authorization</td>
+                        <td>Bearer __token paste here__</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col img-container">
+                <img src="/img/auth.png" alt="">
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="row">
+            <div class="col-5">
+                <h2>4. adding new order</h2>
+                <p>we need to create post request</p>
+                <p>we need to set token inside header for authentication becouse only login user can create order</p>
+                <b>URL to create order:- <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/patients/register</span></b>
+                <center>
+                    <h4>Header Fild</h4>
+                </center>
+                <table border="1" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Authorization</td>
+                        <td>Bearer __token paste here__</td>
+                    </tr>
+                </table>
+                <p>Bearer is a keyword then space then paste token</p>
+                <table  border="1" class="table table-striped">
+                   <thead>
+                        <tr>
+                            <th>key</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>total</td>
+                        <td>2837</td>
+                    </tr>
+                    <tr>
+                        <td>phone</td>
+                        <td>enter phone no</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col img-container">
+                <img src="/img/register-patient.png" alt="">
+            </div>
+        </div>
+        
+        <!-- 5 -->
+        <div class="row">
+            <div class="col-5">
+                <h2>5. get all order of given user</h2>
+                <p>we need to create get request</p>
+                <p>we need to set token inside header for authentication becouse only login user can access all order of self</p>
+                <b>URL to get all order:- 
+                    <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/patients/<span style="color:red;">paste user id here</span>/create_report
+                    </span>
+                </b><br>
+                <p>like:- 
+                    <span
+                        style="color: green;">https://cloudy-fox-garment.cyclic.app/patients/<span style="color:red;">63ce56a568ddc9d2e21c8857 </span>/create_report
+                    </span>
+                </p>
+            </div>
+            <div class="col img-container">
+                <img src="/img/genrate-report.png" alt="">
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

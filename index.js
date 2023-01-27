@@ -5,7 +5,7 @@ const port=process.env.PORT || 8000;
 const app=express();
 
 app.set('view engine','ejs');
-app.set('view','./view');
+app.set('views','./view');
 
 app.use(bodyParser.urlencoded({extended:false}));
 

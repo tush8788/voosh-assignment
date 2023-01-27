@@ -45,7 +45,7 @@ module.exports.signIn= async function(req,res){
         return res.status(200).json({
             message:"Sign in Successfully, keep safe your token",
             data:{
-                token:jwt.sign(user.toJSON(),"secretKey",{expiresIn:"50000"})
+                token:jwt.sign(user.toJSON(),"secretKey",{expiresIn:"100000"})
             }
         })
         
@@ -54,4 +54,10 @@ module.exports.signIn= async function(req,res){
         console.log(err);
         return;
     }
+}
+
+//add order
+module.exports.addOrder=async function(req,res){
+    console.log(req.body," ",req.user);
+    
 }

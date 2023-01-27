@@ -2,10 +2,12 @@ const passport =require('passport');
 const jwtStrategy=require('passport-jwt').Strategy;
 const ExtractKJWT=require('passport-jwt').ExtractJwt;
 const UserDB=require('../models/user');
+const dotenv=require('dotenv').config();
+
 
 let opts={
     jwtFromRequest:ExtractKJWT.fromAuthHeaderAsBearerToken(),
-    secretOrKey:"secretKey"
+    secretOrKey:process.env.secrectKey
 }
 
 passport.use(new jwtStrategy(opts,async function(jwt_payload,done){

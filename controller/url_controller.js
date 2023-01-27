@@ -2,6 +2,7 @@ const UserDB=require('../models/user');
 const OrderDB=require('../models/orders');
 const bcrypt=require('bcrypt');
 const jwt=require('jsonwebtoken');
+const dotenv=require('dotenv').config();
 
 //sign up
 module.exports.signUp=async function(req,res){
@@ -48,7 +49,7 @@ module.exports.signIn= async function(req,res){
         return res.status(200).json({
             message:"Sign in Successfully, keep safe your token",
             data:{
-                token:jwt.sign(user.toJSON(),"secretKey",{expiresIn:"100000"})
+                token:jwt.sign(user.toJSON(),process.env.secrectKey,{expiresIn:"100000"})
             }
         })
         

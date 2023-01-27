@@ -8,6 +8,10 @@ const orderSchema=new mongoose.Schema({
     orderTotal:{
         type:Number,
         required:true
+    },
+    phone:{
+        type:String,
+        required:true
     }
 },{
     timestamps:true

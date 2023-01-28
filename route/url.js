@@ -14,4 +14,5 @@ router.post('/add-order',passport.authenticate('jwt',{session:false}),urlControl
 
 //all orders
 router.get('/get-order/:id',passport.authenticate('jwt',{session:false}),urlController.allOrder);
+
 module.exports=router;
